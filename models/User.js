@@ -16,7 +16,7 @@ const UsersSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
-  Id: {
+  id: {
     type: String,
     required: false,
   },
