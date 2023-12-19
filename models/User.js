@@ -26,7 +26,7 @@ const UsersSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
-  destination: {
+  strategy: {
     type: String,
     required: false,
   },
