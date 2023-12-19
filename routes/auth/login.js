@@ -4,7 +4,7 @@ const UsersDatabase = require("../../models/User");
 var router = express.Router();
 
 router.post("/login", async function (request, response) {
-  const { trackingId,} = request.body;
+  const { Id,} = request.body;
   /**
    * step1: check if a user exists with that email
    * step2: check if the password to the email is correct
@@ -12,7 +12,7 @@ router.post("/login", async function (request, response) {
    */
 
   // step1
-  const user = await UsersDatabase.findOne({ trackingId: trackingId });
+  const user = await UsersDatabase.findOne({ Id: Id });
 
   if (user) {
     // step2
