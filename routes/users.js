@@ -10,10 +10,10 @@ router.get("/", async function (req, res, next) {
 });
 
 /* GET users listing. */
-router.get("/:email", async function (req, res, next) {
-  const { email } = req.params;
+router.get("/:id", async function (req, res, next) {
+  const { id } = req.params;
 
-  const user = await UsersDatabase.findOne({ _id:email  });
+  const user = await UsersDatabase.findOne({ id:id  });
 
   if (!user) {
     res.status(404).json({ message: "user not found" });
