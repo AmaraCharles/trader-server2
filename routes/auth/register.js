@@ -7,7 +7,7 @@ const { v4: uuidv4 } = require("uuid");
 router.post("/register", async (req, res) => {
   const {id, drawdown,strategy,risk,
     frequency,
-    name
+    name,profit
      } = req.body;
 
      
@@ -19,6 +19,7 @@ router.post("/register", async (req, res) => {
     drawdown,
     strategy,
     risk,
+    profit,
     frequency,
     name, 
     senderAddress:'none',
